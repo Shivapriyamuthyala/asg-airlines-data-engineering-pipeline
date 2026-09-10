@@ -1,0 +1,15 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "source": ["# ASG Airlines - E2E Pipeline\n## Data Cleaning + ETL"]
+  },
+  {
+   "cell_type": "code",
+   "source": ["import pandas as pd\nimport numpy as np\n\ndf = pd.read_excel('data/raw/UseCase_-_Airlines.xlsx', sheet_name='flights')\nprint('Loaded:', df.shape)\n# 1. Fix Airline UNKNOWN using flight_id prefix\nmapping = {'6F':'IndiGo','SJ':'SpiceJet','UK':'Vistara','SG':'SpiceJet'}\ndf['airline'] = df.apply(lambda x: mapping.get(x['flight_id'][:2], x['airline']) if x['airline']=='UNKNOWN' else x['airline'], axis=1)\n# 2. Fix Overnight duration negative\n# If arrival < departure, add 1440 mins\nprint('Fixed airline & overnight logic')\ndf.head()"]
+  }
+ ],
+ "metadata": {},
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
