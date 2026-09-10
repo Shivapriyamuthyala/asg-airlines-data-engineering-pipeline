@@ -1,0 +1,9 @@
+Power BI Dashboard Placeholder
+Project: ASG Airlines Data Engineering Pipeline
+Author: Shiva Priya Muthyala
+Visuals Included: 
+1. Route-wise Traffic (BOM-CCU busiest)
+2. Revenue by Airline
+3. Booking Status %
+4. Overnight Flights Analysis
+Note: Actual .pbix to be updated after Power BI installation. Dashboard screenshots are in dashboards/screenshots/ folder.
